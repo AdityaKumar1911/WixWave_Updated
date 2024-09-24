@@ -164,7 +164,8 @@ export default function WixWaveAgency() {
       setCurrentWord((prev) => (prev + 1) % words.length)
     }, 2000)
     return () => clearInterval(interval)
-  }, [])
+  }, [words.length]) // Add words.length here
+  
 
   useEffect(() => {
     if (inView) {
@@ -290,8 +291,9 @@ export default function WixWaveAgency() {
                   WixWave is a leading digital agency specializing in creating innovative solutions for businesses of all sizes. Our team of experts is passionate about leveraging the latest technologies to help our clients succeed in the digital world.
                 </motion.p>
                 <motion.p className="text-base md:text-lg" variants={itemVariants}>
-                  With our comprehensive range of services, from web and app development to SEO and social media management, we're your one-stop shop for all your digital needs. Our 24/7 support ensures that we're always here when you need us.
-                </motion.p>
+  With our comprehensive range of services, from web and app development to SEO and social media management, we&apos;re your one-stop shop for all your digital needs. Our 24/7 support ensures that we&apos;re always here when you need us.
+</motion.p>
+
               </motion.div>
             </div>
           </section>
